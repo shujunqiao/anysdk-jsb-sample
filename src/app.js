@@ -146,7 +146,8 @@ var AgentLayer = cc.Layer.extend({
             iap_plusgin.setResultListener(this.onPayResult, this);
         }
         // set share result listener
-        share_plugin.setResultListener(this.onShareResult, this);
+        if (share_plugin)
+            share_plugin.setResultListener(this.onShareResult, this);
 
         // 
         this.funcOfAgent();
@@ -268,10 +269,8 @@ var AgentLayer = cc.Layer.extend({
         }
         switch(idx){
             case user_operation.login:{
-                    if ( user_plugin.isSupportFunction("login") ){
-                        user_plugin.callFuncWithParam("login");
-                        analytics_plugin.logEvent("login");
-                    }
+                    user_plugin.login();
+                    analytics_plugin.logEvent("login");
                 }break;
             case user_operation.logout:
                     if ( user_plugin.isSupportFunction("logout") )
