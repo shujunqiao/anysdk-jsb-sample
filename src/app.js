@@ -282,7 +282,7 @@ var AgentLayer = cc.Layer.extend({
                 break;
             case user_operation.showToolbar:
                     if ( user_plugin.isSupportFunction("showToolBar") ){
-                        var param1 = anysdk.PluginParam.create(1)
+                        var param1 = anysdk.PluginParam.create(ToolBarPlace.kToolBarTopLeft)
                         user_plugin.callFuncWithParam("showToolBar", param1);
                     }
                 break;
@@ -367,12 +367,12 @@ var AgentLayer = cc.Layer.extend({
         switch(idx){
             case ads_operation.showAds:
                 if ( ads_plugin.isSupportFunction("AD_TYPE_FULLSCREEN") )
-                    ads_plugin.showAds(1)
+                    ads_plugin.showAds(AdsType.AD_TYPE_FULLSCREEN)
                     // ads_plugin.showAds(AdsType.FULLSCREEN)
                 break;
             case ads_operation.hideAds:
                 if ( ads_plugin.isSupportFunction("AD_TYPE_FULLSCREEN") )
-                    ads_plugin.hideAds(1)
+                    ads_plugin.hideAds(AdsType.AD_TYPE_FULLSCREEN)
                 break;
         }
     },

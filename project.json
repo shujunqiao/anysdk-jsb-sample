@@ -12,6 +12,7 @@
 
     "jsList" : [
         "src/resource.js",
+        "src/anysdkConst.js",
         "src/app.js"
     ]
 }
