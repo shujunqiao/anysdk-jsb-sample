@@ -59,7 +59,7 @@ var HelloWorldLayer = cc.Layer.extend({
 var appKey = "BA5B660B-6DD5-0F67-8CC7-8FE0BA7545D6";
 var appSecret = "e23ae7d6da34334d4cc11df0dc7f3de0";
 var privateKey = "76E1D975EA4B9A4ECD0E85AF2D782E99";
-var oauthLoginServer = "http://oauth.qudao.info/api/OauthLoginDemo/Login.php";
+var oauthLoginServer = "http://oauth.anysdk.com/api/OauthLoginDemo/Login.php";
 
 var agent = null;
 var user_plugin = null;
